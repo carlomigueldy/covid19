@@ -20,3 +20,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Attribution
+https://github.com/javieraviles/covidAPI 
+
+https://github.com/sorxrob/coronavirus-ph-api
