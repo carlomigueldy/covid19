@@ -1,9 +1,9 @@
 <template>
-  <v-app dark>
+  <v-app app>
     <v-app-bar
       :color="color"
-      fixed
       dark
+      fixed
       app
     >
       <v-toolbar-title v-text="title" />
@@ -15,12 +15,18 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item @click="$router.push({ name: 'about' })">
+          <!-- <v-list-item @click="$router.push({ name: 'about' })">
             <v-list-item-action>
               <v-icon>mdi-information</v-icon>
             </v-list-item-action>
             <v-list-item-content>
               <v-list-item-title>About</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item> -->
+
+          <v-list-item href="https://carlomigueldy.com" target="_blank">
+            <v-list-item-content>
+              <v-list-item-title>© {{ new Date().getFullYear() }} Carlo Miguel Dy</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -36,8 +42,8 @@
     <v-bottom-navigation
       app
       grow
-      color="teal"
       fixed
+      color="primary"
     >
       <v-btn @click="$router.push({ name: page.to })" v-for="(page, index) in pages" :key="index">
         <span v-text="page.title"></span>
@@ -61,20 +67,20 @@ export default {
         //   icon: 'mdi-chart-bubble',
         //   to: 'countries'
         // },
-        // {
-        //   title: 'Prevention',
-        //   icon: 'mdi-home',
-        //   to: 'prevention'
-        // },
+        {
+          title: 'Map',
+          icon: 'mdi-map',
+          to: 'map'
+        },
         {
           title: 'Home',
           icon: 'mdi-home',
           to: 'index'
         },
         {
-          title: 'Contact',
-          icon: 'mdi-phone',
-          to: 'contact'
+          title: 'Global',
+          icon: 'mdi-globe-model',
+          to: 'global'
         },
       ],
       title: 'COVID-19 Tracker',

@@ -24,6 +24,7 @@ const actions = {
 			const { data } = await axios.get('https://coronavirus-19-api.herokuapp.com/all')
 
 			commit('SET_GLOBAL_CASES', data)
+			console.log(data)
 		} catch (err) {
 			console.log(err)
 		}
@@ -34,6 +35,7 @@ const actions = {
 			const { data } = await axios.get('https://coronavirus-19-api.herokuapp.com/countries')
 			
 			commit('SET_COUNTRY_CASES', data)
+			console.log(data)
 		} catch (err) {
 			console.log(err)
 		}
