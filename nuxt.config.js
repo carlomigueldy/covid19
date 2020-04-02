@@ -30,7 +30,11 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vue-number-animation'
+    '@/plugins/vue-number-animation',
+    '@/plugins/vue2-leaflet',
+    '@/plugins/vue-moment',
+    '@/plugins/main',
+    '@/plugins/mdi',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -58,20 +62,6 @@ export default {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
   },
   /*
   ** Build configuration
@@ -82,5 +72,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+
+  env: {
+    MAPBOX_ACCESS_TOKEN: 'pk.eyJ1IjoiY2FybG9taWd1ZWxkeSIsImEiOiJjandjM3BvbGswNG1yNDhsYzJsbG9yM21sIn0.q7tueMfN8BVk3gZDUKItYQ',
   }
 }
